@@ -1,0 +1,58 @@
+
+/*CSS Reset*/
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body{
+    overflow: hidden;
+}
+
+
+/*Navigation Bar Styles*/
+
+nav, #nav-items > ul{
+    display: flex;
+    justify-content:space-between;
+    padding: 1em;
+
+}
+
+li{
+    list-style: none;
+    padding: 0 1em 0 1em;
+}
+
+a {
+    all: unset; 
+    text-decoration: none;
+    color: inherit; 
+    padding: 0.5em;
+   
+}
+
+a:hover{
+    text-decoration: underline;
+    color:palevioletred;
+    border-radius: 0.3em;
+   
+}
+
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1{
+    font-size: 6em;
+}
+
+span{
+    color: blue;
+}

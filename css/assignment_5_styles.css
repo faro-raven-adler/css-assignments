@@ -1,0 +1,404 @@
+/*===========================================
+Imports &Variable Declaration
+=============================================*/
+
+/*Lato Font Import*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --primary-font: 'Lato',sans-serif;
+    
+    /*Color*/
+    --primary-surface-color:#FFFFFF;
+    --secondary-surface-color:#1179BF;
+    --tertiary-surface-color:#038E7D;
+    --accent-color:#F5F8FA;
+    --form-field-color:#EDEFF2;
+    --border-color:979797;
+    --accent-font-color:#B9F5FF;
+    --icon-font-color: #548BC5;
+    --primary-font-color:#1D2C3C;
+    --secondary-font-color:#FFFFFF;
+    --tertiary-font-color:#646E7A;
+}
+
+
+
+
+/*==========================================
+Resetting / normalising CSS 
+============================================*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--primary-font);
+  
+}
+
+body{
+  margin: 0 auto;
+}
+
+
+/*==========================================
+Layouts
+============================================*/
+.container{
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 1.8em;
+  
+
+}
+
+main{
+  display: flex;
+  width: 45%;
+  background-color: var(--primary-surface-color);
+  margin: 0 auto;
+  border-radius: 0.5em;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+form{
+  width: 65%;
+  height: 100%;
+}
+
+.checkout-container{
+  width: 100%;
+ 
+}
+
+aside{
+  width: 35%;
+  height: 100%;
+  background-color:var(--secondary-surface-color) ;
+  border-radius: 0 0.5em 0.5em 0 ;
+  color: var(--primary-surface-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  
+}
+
+
+
+
+
+
+/*==========================================
+Components
+============================================*/
+input{
+  background-color: var(--form-field-color);
+  border: none;
+  padding: 0.5em;
+  min-height: 2.25em;
+  border-radius: 0.25em;
+  color: var(--tertiary-font-color);
+}
+
+input:focus{
+  border: none;
+  outline: none;
+}
+
+/*Form Header*/
+#form-header-container{
+  width: 100%;
+
+}
+
+#form-header{
+  color:var(--primary-font-color);
+  font-size: 1.5em;
+  text-shadow: 0.125em 0.125em 0.125em rgba(109, 109, 109, 0.5);
+  margin: 1.4em;
+  font-weight: 400;
+}
+
+.form-hr{
+  margin: 2em 0;
+  color: var(--border-color);
+  width: 100%;
+}
+
+
+
+
+/*Navigation*/
+.nav-items{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+ 
+}
+
+.nav-item{
+  text-decoration: none;
+  color: initial;
+  font-weight: .8em;
+  letter-spacing: -0.01px;
+  color: var(--primary-font-color);
+  padding: 0.5em;
+  margin: 0 1.2em;
+}
+
+#log-on{
+  border: 0.05em var(--tertiary-font-color) solid;
+  border-radius: 0.25em;
+}
+
+hr{
+  color: var(--tertiary-font-color);
+  margin: 1.8em;
+}
+
+
+/*Credit card form Input*/
+.card-details-container, .label-container{
+  width: 80%;
+  
+  margin: 0 auto;
+
+}
+.label-container{
+  margin-bottom: 0.125em;
+}
+
+.cc-input{
+  margin-right: -1em;
+}
+
+#card-number{
+  border-radius: 0.25em 0.25em 0;
+  min-width: 18em;
+}
+
+#date-cc{
+  width: 6em;
+  
+}
+
+#cvc{
+  border-radius: 0 0.25em 0.25em;
+  width: 4em;
+ 
+}
+
+
+/*Form Header*/
+.form-sub-header-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 2em 0 2em;
+
+  
+}
+
+.header-number{
+  border-radius: 50%;
+  color: var(--icon-font-color);
+  font-weight: 200;
+  font-family: var(--primary-font);
+  width: 2.1em;
+  height: 1.9em;
+  border: 0.01em var(--icon-font-color) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.header-number > h3{
+  text-align: center;
+  font-size: 1.12em;
+  
+}
+
+.form-header{
+  width: 98%;
+  font-size: 1.12em;
+  letter-spacing: -0.16px;
+  font-family: var(--primary-font);
+  color: var(--primary-font-color);
+  font-weight: 600;
+  margin-left: 1em;
+}
+
+/*Generic Form Input Container*/
+.form-input-container{
+  display: flex;
+  flex-direction: column;
+  margin:0.8em 1em;
+  width: 80%;
+}
+
+
+.personal-info{
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  margin-right: 4em;
+}
+
+label{
+  margin: 0.4em 0;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--primary-font-color);
+}
+
+.form-input-container:nth-child(3){
+  width: 70%;
+  margin-left: 2.5em;
+  
+}
+
+/*Button*/
+button{
+  background-color: var(--tertiary-surface-color);
+  border: none;
+  color: var(--primary-surface-color);
+  height:3.25em;
+  width: 90%;
+  border-radius: 0.125em;
+  align-self: center;
+  margin: 0 2.5em;
+
+}
+
+/*Product Feature Component*/
+
+.product-feature-container{
+  width: 100%;
+  background-color: var(--secondary-surface-color);
+  margin: 2em 0;
+  padding-left: 0.1em;
+
+}
+
+.product-feature{
+  list-style-type: none;
+  font-family: var(--primary-font);
+  color:var(--secondary-font-color);
+  line-height: 1.5em;
+  letter-spacing: -0.01px;
+}
+
+
+.product-feature::before{
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url("../assets/icons/feature-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+/*Help Components*/
+.help-component{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help-sub > img{
+  height: 1.2em;
+  width: 1.2em;
+  margin-right: 1.5em;
+  align-self: center;
+}
+
+ .help-sub{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8em;
+  margin-left: 2.5em;
+  width: 60%;
+}
+
+#stripe-logo{
+  margin-top:2em;
+
+}
+/**Components for Product Features **/
+h4{
+  font-family: var(--primary-font);
+  font-size: 1.12em;
+  margin: 0.25em 0 0.25em;
+}
+
+.price-checkout-container{
+  margin: 0.25em 0;
+}
+
+
+#price{
+  font-weight: 100;
+  font-size: 3.75em;
+  display: inline;
+}
+
+span > sup{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+#frequency{
+  font-size: 18px;
+  display: inline;
+}
+
+#billing-frequency{
+  font-size: 0.8em;
+  font-style: italic;
+  width: 55%;
+  margin: 1.3em;
+}
+
+#product-alt > p{
+  font-size: 0.8em;
+  margin: 0.25em;
+}
+
+#product-alt > p:nth-child(2){
+  border-bottom: 1px var(--accent-font-color) solid;
+  width: fit-content;
+}
+
+.user-qoute{
+  font-size: 1em;
+  font-style: italic;
+  margin-bottom: 1em;
+  letter-spacing: -0.01px;
+  width: 90%;
+  
+  
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+}
+
+.user > img{
+  border-radius: 50%;
+  margin-right: 0.8em;
+}

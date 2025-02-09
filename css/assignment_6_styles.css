@@ -1,0 +1,594 @@
+
+
+/* ===========================
+    Imports
+============================= */
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../assets/fonts/Gilroy-Regular.ttf') as format('Gilroy-Regular');
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../assets/fonts/Gilroy-Medium.ttf') as format('Gilroy-Medium');
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../assets/fonts/gilroy-semibold.ttf') as format('Gilroy-SemiBold');
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../assets/fonts/Gilroy-Bold.ttf') as format('Gilroy-Bold');
+}
+
+
+/* ===========================
+    CSS Variables
+============================= */
+
+:root {
+    /* Typography */
+
+    --font-primary:'Gilroy-Medium', sans-serif;
+    --font-secondary:'Gilroy-SemiBold', sans-serif;
+    --font-headers:'Gilroy-Bold',sans-serif;
+   
+    /*Color*/
+    --primary-color:#141414;
+    --secondary-color: #0065FE;
+    --accent-color:#FFFFFF;
+    --emphasis-color: #1E3448;
+}
+
+
+/* ===========================
+    Reset CSS Styles
+============================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* ===========================
+    CSS Base styles
+============================= */
+body {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+}
+
+ ::-webkit-scrollbar {
+        display: none;
+      }
+
+
+ /* ===========================
+    Layout Styles
+============================= */
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+    #hero-section{
+        width: 100%;
+        
+        background-image: u rl('../assets/images/Hero-background.png');
+        background-size:cover;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        margin-top: -2em;
+     
+    }
+
+    .sub-text-container{
+        z-index: 100;
+        position: relative;
+        top: 196px;
+        left: 196px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:72%;
+        height: 5em;
+        border-radius: 1em;
+
+    }
+    
+
+    #hero-subtext{
+        width:65%;
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    .product-placement{
+        background-image: url('../assets/images/hero-bottom.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 20vh;
+        width: 100vw;
+        
+    }
+    
+    .hidden{
+        visibility: hidden;
+        width: inherit;
+        height: inherit;
+    }
+
+
+    /*Product Features Components*/
+    .product-features-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 13.75em;
+        background-color: #F9FBFD;
+        margin-top: -1.5em;
+    }
+
+    .feat-description{
+        font-size: 0.8em;
+    }
+
+    .feat-header{
+        font-size: 2em;
+    }
+
+    .product-feat-heading{
+        font-size: 2.5em;
+    }
+
+    .feat-detail-container{
+        margin:0 2em em 0;
+
+    }
+
+
+    #product-spec-section{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        padding: 6em;
+        margin: 4em 0 4em 0;
+    }
+
+
+    #price-spec-section{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4em;
+    }
+
+    #product-demo{
+        width: 100wv;
+        height: 32.69em;
+        background-image: url(../assets/backgrounds/backgound-1.png);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #faq{
+        min-height: 72em;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin:4em 0;
+
+    }
+
+    #main-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70vw;
+        margin: 0 auto;
+       
+    }
+
+  
+
+  
+   
+    /*Pricing Component*/
+
+    #pricing-component {
+        width: 68em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6em;
+        
+    }
+
+
+/* ===========================
+    Component Styles
+============================= */
+
+/*Header Components*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 6em;
+    align-items: center;
+}
+
+span>img{
+    margin-left: 0.1em;
+}
+
+#nav-list, #reg-list{
+    display: flex;
+}
+
+.nav-item, #trial, #login{
+    display: flex;
+    list-style-type: none;
+    min-width: 7em;
+    font-size: 1.2em;
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+}
+
+.nav-item::before, #trial::before, #login::before {
+    background-image: none;
+    padding: 0;
+    margin-right: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-items{
+    margin-left: 3em;
+}
+
+.blue{
+    color: var(--secondary-color);
+}
+
+.login-signup > a {
+    min-width: 3em;
+    padding:0.5em 1em ;
+    font-size: 1.2em;
+    font-family: var(--font-primary);
+}
+
+/*Buttons*/
+
+.generic{
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    min-width: 3em;
+    padding:0.5em 1em ;
+    font-size: 1.2em;
+    font-family: var(--font-primary);
+    border-radius: 3em;
+}
+
+
+/*Pricing Component*/
+
+.card{
+    width: 23.69em;
+    height: 28.44em;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 0.75em;
+    padding: 1em 0 2em 3em;
+    border: var(--secondary-color) solid 0.05em;
+
+}
+
+#primary-card{
+    position: relative;
+    width: 25.63em;
+    height: 34.19em;
+    margin: -32px -16px;
+    z-index: 2;
+    background-color: var(--emphasis-color);
+    color: var(--accent-color);
+    border: none;
+}
+
+.card > h4 {
+    font-size: 1.5em;
+    font-weight: 100;
+    line-height: 2em;
+
+}
+
+
+.card > h2 {
+    font-family: var(--font-headers);
+    font-size: 2.5em;
+    line-height: 2em;
+}
+
+.card > h5 {
+    font-family: var(--font-primary);
+    line-height: 1.5em;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+.card > ul, li{
+    margin: 1em 0 1em 0;
+}
+
+
+.card > ul{
+    padding-left:1em;
+}
+
+li{
+    list-style-type: none;
+    
+}
+
+li::before {
+    content: "";
+    background-image: url(../assets/icons/check-circle.png);
+    background-size: contain; 
+    width: 1em;
+    height: 1em; 
+    display: inline-block;
+    margin-right: 0.6em;
+    vertical-align: middle;
+}
+
+.primary-feature::before{
+    content: "";
+    background-image: url(../assets/icons/check-circle-white.png);
+    background-size: contain; 
+    width: 1em;
+    height: 1em; 
+    display: inline-block;
+    margin-right: 0.6em;
+    vertical-align: middle;
+
+}
+
+
+
+/*Pricing Section - CTA*/
+
+#price-cta{
+    margin-top: 4em;
+    display: flex;
+    
+}
+
+.btn-primary, .btn-secondary{
+    font-size: 1em;
+    font-family: var(--font-secondary);
+    text-align: center;
+    width: 12em;
+    margin: 0.75em;
+    padding: 0.75em;
+    border-radius: 2em;
+    border: var(--secondary-color) solid 0.1em;
+}
+
+.btn-primary{
+    color: var(--secondary-color);
+}
+
+.btn-secondary{
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+}
+
+
+/*Pricing Section - Section Header*/
+
+.section-header{
+    display: flex;
+    width: 42em;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    width: 0.3em;
+    height: 2em;
+    background: linear-gradient(to bottom, black, white);
+}
+
+.section-heading > h2{
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    margin-left: 0.2em;
+    color: var(--primary-color);
+
+}
+
+
+#price-sub-text{
+    width: 35em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+
+
+span{
+    color: var(--secondary-color);
+}
+
+
+form{
+    width: 29.75em;
+    height: 22.19em;
+    padding: 2.5em;
+    border-radius: 1em;
+    background-color: var(--accent-color);
+   
+}
+
+
+input, select, input::placeholder{
+    color: var(--secondary-color);
+    font-family: var(--primary-color);
+    font-size: 0.9em;
+    padding: 0.5em;
+    border-radius: 0.8em;
+    width: 12.25em;
+    margin: 0.5em;
+    height: 3.44em;  
+}
+
+input, select{
+    border: var(--secondary-color) solid 0.1em;
+}
+
+form > input:nth-child(1){
+    width: 26em;
+    
+}
+
+form > .btn-secondary{
+    width: 23em;
+}
+
+select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url(../assets/icons/drop-down.png) no-repeat;
+    background-position: right 1.5em center;
+    background-size: 0.9em;
+    
+}
+
+form > p {
+    color: var(--secondary-color);
+    font-size: 0.8em;
+    margin: 0 0.8em;
+    padding: 0  0.5em;
+    
+}
+
+select option {
+    font-size: 4em;
+}
+
+#wand{
+    vertical-align: middle;
+    height: 1.2em;
+
+}
+
+details{
+    width: 40em;
+    background-color: #0065FE;
+    
+}
+
+
+
+summary{
+    width: 20vw;
+    list-style-type: none;
+    
+
+}
+
+/*Hero page compents*/
+h1{
+    font-size: 3em; 
+    text-align: center;
+    padding: 1em 0 0.3em;
+}
+
+#main-text > p {
+    width: 42vw;
+    text-align: center;
+    margin: 1.5em;
+}
+
+#learn{
+    font-size: 1.2em;
+    
+}
+
+#hero-cta{
+    margin-top: 2em;
+}
+
+.hero-cta > a{
+    margin:3em;
+    background-color: #141414;
+}
+
+#vp-section{
+    justify-content: left;
+}
+
+.value-prop{
+    width: 30%;
+
+}
+
+.specs{
+    width: 70%;
+    
+
+}
+
+
+/*Product Spec Components*/
+#value-prop-sum{
+    padding: 1.3em;
+    font-size: 1em;
+    font-family: var(--font-primary);
+    line-height: 1.75em;
+}
+
+.specs{
+    margin-top:3em;
+}
+
+.spec-component{
+    padding-left: 4em;
+    margin-right: 8em;
+    
+}
+.spec-desc{
+    font-size: 1em;
+    margin-top: 0.5em;
+    line-height: 1.5em;
+    width: 100%;
+
+}
+
+.spec-image{
+    margin-bottom: 1em;
+}
+
+.spec-heading{
+    font-size: 2em;
+    margin-bottom: 1em;
+
+}
+
+.combo-specs{
+    display: flex;
+    margin-bottom: 6em;
+}

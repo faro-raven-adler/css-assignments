@@ -1,0 +1,341 @@
+/* =================================
+CSS Imports
+==================================*/
+@font-face {
+  font-family: "Sofia-Pro";
+  src: url("..//assets/fonts/sofia-pro/sofiapro-light.otf") as
+    format("Sofia-Pro");
+}
+
+@font-face {
+  font-family: "Brown Pro Regular", sans-serif;
+  src: url("../assets/fonts/brown/Brown\ Pro\ Regular.otf") as
+    format("Brown Pro Regular");
+}
+
+/* =================================
+Variables
+==================================*/
+:root {
+  /*Typography*/
+  --primary-text-font: "Sofia-Pro", sans-serif;
+  --primary-header-font: "Brown Pro Regular", sans serif;
+
+  /* Color */
+  --primary-surface-color: #f7fdfc;
+  --secondary-surface-color: #ffffff;
+  --accent-color: #2ec4b6;
+  --primary-text-color: #011c34;
+  --secondary-text-color: #737373;
+  --header-text-color: #000b0a;
+  --border-color: #f0f0f0;
+}
+
+/* =================================
+CSS Reset
+==================================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* =================================
+Layout Styles
+==================================*/
+body {
+    background-color: var(--primary-surface-color);
+    overflow: hidden;
+  }
+.container {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+@media (max-width: 376px) {
+  
+  /*Hiding styling for desktop*/
+  #desktop{
+    display: none;
+  }
+
+ 
+
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5em 1.5em 1.5em;
+    width: 90vw;
+  }
+
+  #mobile-logo {
+    width: 2.5em;
+    height: 2.4em;
+    object-fit: scale-down;
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+  }
+  h2 {
+    color: var(--header-text-color);
+    width: 80vw;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-family: var(--primary-text-font);
+  }
+
+  p {
+    font-size: 1em;
+    font-family: var(--primary-text-font);
+    width: 85vw;
+  }
+
+  /*Registration Form*/
+
+  #reg-form {
+    width: 100vw;
+
+    padding: 0 1.8em 1.8em 1.8em;
+    height: 6em;
+    margin: 0 auto;
+    border-radius: 0.2em;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--secondary-surface-color);
+    justify-content: center;
+    box-shadow: 0.1em 0.1em var(--border-color);
+    border-radius: 1em;
+  }
+}
+
+@media(min-width: 1024px){
+
+    #mobile{
+        display: none;
+    }
+
+    body{
+        overflow: none;
+    }
+
+    #desktop{
+  
+        display: flex;
+        flex-direction: row;
+    }
+
+    #hero-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        min-height: 100%;
+        background-color: var(--primary-surface-color)
+
+    }
+
+    .left-content{
+        display: flex;
+        flex-direction: column;
+        margin: 8.75em;
+        width: 50%;
+        font-family: var(--primary-text-font);
+
+    }
+
+    #hero-right{
+        width: 50%;
+        height: 100vh;
+        background-color: var(--primary-surface-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-form{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        min-height: 75%;
+        background-color: var(--secondary-surface-color);
+        border-radius: 0.2em;
+    }
+
+    .hero-form-top{
+        display: flex;
+        width: 100%;
+        padding: 0  2em;
+    }
+
+    .hero-form-bottom{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em 0 2em;
+        
+    }
+
+    #hero-form-left, #hero-form-right{
+        width: 50%;
+        height: fit-content;
+        margin-top: 1.5em;
+
+    }
+    
+    
+}
+
+/* =================================
+Component Styles
+==================================*/
+
+/*Primary Button*/
+.primary-btn {
+  background-color: var(--accent-color);
+  font-family: var(--primary-text-font);
+  color: var(--primary-surface-color);
+  font-weight: 500;
+  width: 100%;
+  min-height: 3em;
+  border: none;
+}
+
+.hero-form-bottom > .primary-btn{
+   width: 100%;
+   margin-left: 1.4em;
+   margin-right: 0.2em;
+   max-width: 34em;
+}
+
+/*Form Inputs*/
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 4.5em;
+  margin: 1em 1em 0.5em 1em;
+}
+
+.input-sub-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8em;
+  padding-right: 1.2em;
+  border: 0.01em solid var(--primary-surface-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-icon {
+  position: absolute;
+  right: 1.8em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+.icon {
+  padding: 0.8em;
+  min-width: 3.5em;
+  text-align: center;
+}
+
+.input-label {
+  font-family: var(--primary-text-font);
+  font-size: 0.8em;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  min-width: fit-content;
+  margin-bottom: 0.25em;
+}
+
+.input-field {
+  height: 3em;
+  margin-top: 0.25em;
+  border: var(--border-color) 0.03em solid;
+  border-radius: 0.25em;
+  padding: 1em;
+  width: 90%;
+  color: var(--secondary-text-color);
+}
+
+.input-field:focus {
+  outline: none;
+  border: var(--accent-color) 0.05em solid;
+  box-shadow: 0 0 0.1em var(--accent-color);
+}
+
+/*Changing default icon color for date*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.select-field {
+  height: 3em;
+  margin-top: 0.25em;
+  border: var(--border-color) 0.03em solid;
+  border-radius: 0.25em;
+  padding-left: 1em;
+  color: var(--secondary-text-color);
+  width: 90%;
+}
+
+.select-field:focus {
+  outline: none;
+  border: var(--accent-color) 0.05em solid;
+  box-shadow: 0 0 0.1em var(--accent-color);
+  width: 75vw;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+#terms-and-conditions {
+  margin-top: 2em;
+  text-align: center;
+  font-family: var(--primary-text-font);
+  font-size: 0.9em;
+  width: 100%;
+}
+
+
+/*Logo*/
+#logo-large{
+    width: 4.8em;
+    margin-bottom: 1em;
+}
+
+/*Main Heading*/
+h1{
+    
+    margin-bottom: 1em;
+}
+
+/*Hero text*/
+#subtitle{
+    color: var(--secondary-text-color);
+    font-size: 1em;
+}
+
+#password, #activity-level{
+    min-width: 96%;
+}

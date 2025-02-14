@@ -43,6 +43,7 @@ Layout
   display: flex;
   flex-direction: column;
   max-width: 35%;
+  min-height: 30%;
   padding: 0.5em;
   margin-left: 15em;
   margin-top: 3em;
